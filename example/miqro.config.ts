@@ -1,4 +1,4 @@
-import type { MiqroConfig } from "miqro.js";
+import type { MiqroConfig } from "@qnton/miqro";
 
 const config: MiqroConfig = {
 	workflowsDir: "./workflows", // The CLI resolves this relative to process.cwd()

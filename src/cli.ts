@@ -22,7 +22,7 @@ async function main() {
 			process.exit(1);
 		}
 
-		const defaultConfig = `import type { MiqroConfig } from "miqro.js";
+		const defaultConfig = `import type { MiqroConfig } from "@qnton/miqro";
 
 export default {
   port: 3000,
@@ -39,7 +39,7 @@ export default {
 		// Create a sample workflow if none exist
 		const sampleWorkflowPath = resolve(workflowsPath, "sample.ts");
 		if (!existsSync(sampleWorkflowPath)) {
-			const sampleWorkflow = `import type { Workflow } from "miqro.js";
+			const sampleWorkflow = `import type { Workflow } from "@qnton/miqro";
 
 const workflow: Workflow = {
   config: {
@@ -65,7 +65,7 @@ export default workflow;
 				name: "miqro-project",
 				type: "module",
 				dependencies: {
-					"miqro.js": "^0.2.0"
+					"@qnton/miqro": "^0.2.2"
 				},
 				scripts: {
 					dev: "miqro dev",
@@ -226,8 +226,8 @@ export default workflow;
 			"  build   - Compiles project into a standalone executable at ./dist/index.js\n",
 		);
 		console.error("Example:");
-		console.error("  bunx miqro.js init");
-		console.error("  bunx miqro.js dev");
+		console.error("  bunx @qnton/miqro init");
+		console.error("  bunx @qnton/miqro dev");
 		process.exit(1);
 	}
 }

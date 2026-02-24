@@ -1,12 +1,26 @@
 {
-	"name": "miqro.js",
-	"version": "0.2.1",
+	"name": "@qnton/miqro",
+	"version": "0.2.2",
 	"description": "Minimal, high-performance microservice engine.",
+	"homepage": "https://github.com/qnton/miqro#readme",
+	"bugs": {
+		"url": "https://github.com/qnton/miqro/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/qnton/miqro.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"bin": {
-		"miqro": "dist/cli.js",
-		"miqro.js": "dist/cli.js"
+		"miqro": "dist/cli.js"
+	},
+	"directories": {
+		"example": "example",
+		"test": "test"
 	},
 	"files": [
 		"dist"
@@ -18,7 +32,10 @@
 		"format": "biome format --write .",
 		"check": "biome check --write --unsafe --max-diagnostics none && tsc --noEmit"
 	},
-	"type": "module",
+	"dependencies": {
+		"hono": "^4.12.2",
+		"node-cron": "^4.2.1"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.4",
 		"@types/bun": "latest",
@@ -29,9 +46,5 @@
 	"peerDependencies": {
 		"hono": "^4.12.2",
 		"zod": "^3.0.0"
-	},
-	"dependencies": {
-		"hono": "^4.12.2",
-		"node-cron": "^4.2.1"
 	}
 }

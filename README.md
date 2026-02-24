@@ -17,8 +17,8 @@ Designed to process webhooks and run scheduled cron jobs utilizing file-based wo
 
 Create a new project automatically in your current directory:
 ```bash
-bunx miqro.js init
-bun add miqro.js
+bunx @qnton/miqro init
+bun add @qnton/miqro
 ```
 
 This creates a `miqro.config.ts`, a `workflows/` directory, and configures your environment.
@@ -40,7 +40,7 @@ bun run dev
 The engine is configured via `miqro.config.ts`:
 
 ```typescript
-import type { MiqroConfig } from 'miqro.js';
+import type { MiqroConfig } from '@qnton/miqro';
 
 export default {
   port: 3000,
@@ -62,7 +62,7 @@ Webhooks respond to `POST /{id}`. Use **Zod** to validate your payloads and get 
 
 ```typescript
 import { z } from "zod";
-import type { Workflow } from "miqro.js";
+import type { Workflow } from "@qnton/miqro";
 
 export default {
   config: {
@@ -90,7 +90,7 @@ export default {
 If a workflow config provides a `schedule` property (a valid Cron string), it will be executed automatically.
 
 ```typescript
-import type { Workflow } from 'miqro.js';
+import type { Workflow } from '@qnton/miqro';
 
 export default {
   config: {

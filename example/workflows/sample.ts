@@ -1,4 +1,4 @@
-import type { Workflow } from "miqro.js";
+import type { Workflow } from "@qnton/miqro";
 import { z } from "zod";
 
 const schema = z.object({
