@@ -155,10 +155,7 @@ export default workflow;
     // 2. Generate a temporary entrypoint file in the current directory
     const tempEntryPath = resolve(process.cwd(), ".miqro.entry.ts");
 
-    let tempCode = `import { Hono } from 'hono';\n`;
-    tempCode += `import { logger } from 'hono/logger';\n`;
-    tempCode += `import cron from 'node-cron';\n`;
-    tempCode += `import { startMiqroCore } from '${resolve(__dirname, "index.ts")}'; // From miqro module\n\n`;
+    let tempCode = `import { startMiqroCore } from '@qnton/miqro';\n\n`;
 
     // Add static imports
     workflowFiles.forEach((file, idx) => {
