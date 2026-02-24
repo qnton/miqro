@@ -1,11 +1,11 @@
 {
-	"extends": "../tsconfig.json",
-	"compilerOptions": {
-		"rootDir": "..",
-		"baseUrl": ".",
-		"paths": {
-			"@qnton/miqro": ["../src/index.ts"]
-		}
-	},
-	"include": ["**/*"]
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": ".",
+    "paths": {
+      "@qnton/miqro": ["../src/index.ts"]
+    }
+  },
+  "include": ["**/*"]
 }

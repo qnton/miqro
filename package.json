@@ -1,50 +1,50 @@
 {
-	"name": "@qnton/miqro",
-	"version": "0.2.3",
-	"description": "Minimal, high-performance microservice engine.",
-	"homepage": "https://github.com/qnton/miqro#readme",
-	"bugs": {
-		"url": "https://github.com/qnton/miqro/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/qnton/miqro.git"
-	},
-	"license": "ISC",
-	"author": "",
-	"type": "module",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"bin": {
-		"miqro": "dist/cli.js"
-	},
-	"directories": {
-		"example": "example",
-		"test": "test"
-	},
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "rm -rf dist && bun build src/index.ts src/cli.ts --target=bun --outdir=dist && tsc",
-		"test": "bun test",
-		"lint": "biome check .",
-		"format": "biome format --write .",
-		"check": "biome check --write --unsafe --max-diagnostics none && tsc --noEmit"
-	},
-	"dependencies": {
-		"hono": "^4.12.2",
-		"node-cron": "^4.2.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.4.4",
-		"@types/bun": "latest",
-		"@types/node-cron": "^3.0.11",
-		"typescript": "^5",
-		"zod": "^3.24.1"
-	},
-	"peerDependencies": {
-		"hono": "^4.12.2",
-		"zod": "^3.0.0"
-	}
+  "name": "@qnton/miqro",
+  "version": "0.2.3",
+  "description": "Minimal, high-performance microservice engine.",
+  "homepage": "https://github.com/qnton/miqro#readme",
+  "bugs": {
+    "url": "https://github.com/qnton/miqro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qnton/miqro.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "miqro": "dist/cli.js"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && bun build src/index.ts src/cli.ts --target=bun --outdir=dist && tsc",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "check": "biome check --write --unsafe --max-diagnostics none && tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.12.2",
+    "node-cron": "^4.2.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "@types/bun": "latest",
+    "@types/node-cron": "^3.0.11",
+    "typescript": "^5",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "hono": "^4.12.2",
+    "zod": "^3.0.0"
+  }
 }
