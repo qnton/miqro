@@ -95,6 +95,9 @@ venv/
 .venv
 *.venv
 
+# TypeScript artifacts
+*.tsbuildinfo
+
 # Miqro Project Specific
 .tmp/
 credentials.json
