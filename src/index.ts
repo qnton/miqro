@@ -168,11 +168,12 @@ export async function startMiqroCore(
 			};
 
 			// Execute workflow
-			await workflow.execute(payload, context);
+			const result = await workflow.execute(payload, context);
 
 			return c.json({
 				status: "success",
 				message: `Workflow '${workflowId}' executed`,
+				data: result,
 			});
 		} catch (error) {
 			console.error("[Miqro Webhook Error]", error);

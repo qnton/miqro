@@ -30,9 +30,9 @@ export interface WorkflowConfig<T = any> {
 }
 
 // biome-ignore lint/suspicious/noExplicitAny: Default to any for ease of use without Zod
-export interface Workflow<T = any> {
+export interface Workflow<T = any, R = any> {
 	config: WorkflowConfig<T>;
-	execute: (payload: T, context: MiqroContext) => Promise<void> | void;
+	execute: (payload: T, context: MiqroContext) => Promise<R> | R;
 }
 
 export interface MiqroConfig {

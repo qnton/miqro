@@ -65,7 +65,7 @@ export default workflow;
 				name: "miqro-project",
 				type: "module",
 				dependencies: {
-					"@qnton/miqro": "^0.2.2"
+					"@qnton/miqro": "^0.2.3"
 				},
 				scripts: {
 					dev: "miqro dev",

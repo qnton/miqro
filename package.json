@@ -1,6 +1,6 @@
 {
 	"name": "@qnton/miqro",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"description": "Minimal, high-performance microservice engine.",
 	"homepage": "https://github.com/qnton/miqro#readme",
 	"bugs": {

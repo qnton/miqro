@@ -24,6 +24,7 @@ const mockWorkflows: Workflow[] = [
 		execute: (_payload, context) => {
 			executionCounts["webhook-no-auth"]++;
 			lastContext = context;
+			return { success: true, processed: true };
 		},
 	},
 	{
@@ -139,8 +140,9 @@ describe("Miqro Core API", async () => {
 			const res = await executeWebhook("webhook-no-auth");
 
 			expect(res.status).toBe(200);
-			const data = (await res.json()) as Record<string, unknown>;
+			const data = (await res.json()) as Record<string, any>;
 			expect(data.status).toBe("success");
+			expect(data.data.processed).toBe(true);
 			expect(executionCounts["webhook-no-auth"]).toBe(previousCount + 1);
 		});
 
