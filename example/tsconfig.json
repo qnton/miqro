@@ -1,0 +1,11 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"rootDir": "..",
+		"baseUrl": ".",
+		"paths": {
+			"miqro.js": ["../src/index.ts"]
+		}
+	},
+	"include": ["**/*"]
+}

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  miqro-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SAMPLE_API_KEY=local-dev-key
+      - NODE_ENV=development # Set to production when deploying
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: bun run --watch src/index.ts # Run with hot-reloading in dev
